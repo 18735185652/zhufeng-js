@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // //1. Array。prototype.slice = function(){}
+    // // var ary = [12,23,34];
+    // //ary.slice  ->ary这个实例通过原型链查找机制找到Array.prototype.slice这个方法
+    // //ary.slice() ->让找到的slice执行，在执行slice方法的过程中，才把ary数组进行了截取
+    //
+    // //2.Function.prototype.call=function(){}
+    // var obj = {name:"珠峰培训"} //对象名.属性名获取属性值，如果属性名不存在，为undefined
+    // function fn(){
+    //     console.log(this)
+    // }
+    // // fn();
+    // // obj.fn(); //obj,fn is not a function 因为是undefined()执行
+    // // fn.call(obj)
+    // // call方法的作用
+    // //首先我们让原型上的call方法执行，在执行call方法的时候，我们让call方法中的this变为第一个参数值obj
+    // // ;然后再把这个函数执行
+    //
+    // //自己模拟内置的call防范，写一个myCall方法，深入探讨call方法的执行原理
+    // Function.prototype.myCall = function(context){
+    //         //myCall方法中的this就是当前我要操作和改变其this关键字的那个函数名
+    //         //-> 1. 让fn中的this关键字变为context的值->obj
+    //         //-> 让this这个函数中的“this”变为context
+    //         eval(this.toString().replace("this","context")) //的到操作函数的字符串
+    //
+    //         //-> 2. 让fn方法在执行
+    //         this();
+    // }
+    //
+    // fn.myCall(obj); // =>myCall方法中的this是fn
+    // sum.myCall(obj); //myCall方法中的this是sum
+    // function sum(){
+    //     console.log(this);
+    // }
+    //
+    //
+    //
+    //
+    //
+    //
+    // function fn1(){console.log(1);}
+    // function fn2(){console.log(2);}
+    // fn1.call(fn2); // 1 ->首先fn1通过原型链机制找到Function.prototype上的call方法，并且让call方法执行
+    // // 此时call这个方法中的this就是我们操作的fn1 -》在call方法代码执行的过程中首先让fn1中的  this 关键字
+    // // 变为fn2，然后在让fn1方法执行
+    //
+    // fn1.call.call(fn2); // 2 -> fn1.call 首先fn1通过原型链找到Function.prototype上的call方法，然后再让
+    // // call方法通过原型在找到Function原型上的call（因为call本身的值也是一个函数，所以同样可以找到Function.prototype）
+    // // 在第二次在找到call的时候,让方法执行,方法中的this是fn1.call，首先让这个方法中的this变为fn2，然后在让fn1.call
+    // 执行
+
+
+
+
+    function fn1(){
+        console.log(1);
+        console.log(this);
+    }
+    function fn2(){console.log(2);}
+
+    // fn1() //this
+    // fn1.call(fn2);
+
+    fn1.call.call( fn2 );
+
+
+
+
+
+
+
+
+
+
+
+    // var ary = [60,20,60,40,20,30,40,20,50]
+    // Array.prototype.quchong=function(){
+    //     var obj={}
+    //     for(var i=0;i<this.length;i++){
+    //         var cur = this[i];
+    //         if(obj[cur]==cur){
+    //            this[i]=this[this.length-1];
+    //             this.length--;
+    //             i--;
+    //             continue;
+    //         }
+    //         obj[cur]=cur
+    //     }
+    //     return this;
+    // }
+    // ary.quchong()
+    // console.log(ary)
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>补充CSS伪类</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            font-family: "Microsoft Sans Serif";
+        }
+
+        .box{
+            width: 300px;
+            margin: 20px auto;
+            padding:30px;
+            border:1px dashed green;
+        }
+        .box p{
+            line-height: 30px;
+        }
+        /* :before :after  在一个元素标签的前面或者后面创建一个新的虚拟标签，我们可以给这个虚拟的标签增加
+            样式也可以增加内容等...
+        */
+        .box p:before{
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            content: "珠峰培训";
+            background-color: lightskyblue;
+        }
+        .box p:after{
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            content: "珠峰培训";
+            background-color: lightgreen;
+        }
+
+        ul,li{
+            list-style: none;
+        }
+        .list{
+            margin: 20px auto;
+            width: 300px;
+            border:1px solid #000;
+        }
+        .list li{
+            width: 100px;
+            height: 100px;
+            float:left;
+            background-color:lightyellow;
+        }
+
+        /* CSS3中新增的伪类：nth-child */
+        /*.list li:nth-child(odd){*/
+            /*background-color: lightblue;*/
+        /*}*/
+        /*.list li:nth-child(even){*/
+            /*background-color: lightgreen;*/
+        /*}*/
+        .list li:nth-child(4n+1) {
+            background-color: red;
+        }
+        .list li:nth-child(4n+2) {
+            background-color: orange;
+        }
+        .list li:nth-child(4n+3) {
+            background-color: yellow;
+        }
+        .list li:nth-child(4n) {
+            background-color: green;
+        }
+
+       .zoom:after{
+            display: block;
+            content: "";
+            width: 0px;
+            height: 0px;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <p id="boxp">
+        我们是先学习，在考试，考试通过了才交学费；珠峰有完善的教学管理，考试和激励制度帮
+        你不但学的会还能学的好！
+        我们是先学习，在考试，考试通过了才交学费；珠峰有完善的教学管理，考试和激励制度帮
+        你不但学的会还能学的好！
+    </p>
+
+
+</div>
+<ul class="list zoom">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<script>
+
+    // window.getComputedStyle(curEle,null).width
+    // curEle,currentStyle.width
+    var boxp = document.getElementById("boxp");
+    //虽然页面找不到伪类标签，但是我们可以通过getComputedStyle获取伪类里面设置的样式
+    console.log(window.getComputedStyle(boxp,"before").height)
+
+
+</script>
+</body>
+</html>

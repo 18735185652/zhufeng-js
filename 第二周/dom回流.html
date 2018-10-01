@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>数据绑定以及DOM回流</title>
+    <style>
+        *{ margin: 0; padding: 0; list-style: none; }
+        .box{ width: 400px; margin: 30px auto; border: 2px solid #ccc; border-radius: 5px; padding: 20px; box-sizing: border-box; }
+        .box li { position: relative; padding-left: 20px; height: 30px; line-height: 30px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+        .box li span{ display: inline-block; line-height: 20px; text-align: center; width: 20px; height: 20px; border-radius: 50%; border: 1px solid darkblue; background: pink; color: darkmagenta; }
+    </style>
+</head>
+<body>
+<div class="box J-box"  id="J-box">
+    <ul>
+        <li><span>1</span>人社部：降低养老保险缴费缴费 合并生育医疗险</li>
+        <li><span>2</span>内部矛盾公开公开公开 达赖发怒拒见“藏独”头目</li>
+        <li><span>3</span>"东莞一哥一哥"刘志庚黑色往事 曾称扫黄要有度</li>
+    </ul>
+</div>
+</body>
+</html>
+<script src="json-bind.js"></script>
+<script>
+    //获取我们要操作的元素
+    var oDiv = document.getElementById('J-box');
+    var oUl = oDiv.getElementsByTagName('ul')[0];
+    var oLis = oDiv.getElementsByTagName('li'); //我这会获取的时候是不是新添加的
+    for(var i=0; i<oLis.length; i++){
+        oLis[i].onmouseover = function (){
+            this.style.backgroundColor = 'pink';
+        }
+        oLis[i].onmouseout = function (){
+            this.style.backgroundColor = '';
+        }
+    }
+    //1.利用动态创建元素节点和把它追加到页面中的方式实现数据绑定
+//    for(var i=0;i<ary.length;i++){
+//        var cur = ary[i];
+//        var oLi = document.createElement("li");
+//        oLi.innerHTML = "<span>" + (i+4) + "</span>"+cur.title;
+//        oUl.appendChild(oLi);
+//    }
+    //优势：把需要动态绑定的内容一个个的追加到页面中，对原来的元素没有任何的影响
+    //弊端：每当创建一个li，我们就添加到页面当中，引发一次DOM的回流，最后引发回流的次数过多，影响我们的性能
+
+    //2.字符串拼接的方式：首先循环需要绑定的数据，然后把需要动态绑定的标签以字符串的方式拼接
+    // 到一起，拼接完成后最好统一的追加到页面中 ->"字符串拼接绑定数据是我们以后工作中最常用的一种绑定数据的方式"
+
+//    var str=""
+//    for(var i=0;i<ary.length;i++){
+//        var cur = ary[i];
+//        str+="<li>"
+//        str+="<span>"+(i+4)+"</span>"
+//        str+=cur.title;
+//        str+="</li>"
+//    }
+//    oUl.innerHTML+=str; //oUl.innerHTML=oUl.innerHTML(把之前的三个li以字符串的方式获取到)+str；
+//   (拼接完成的整体还是字符串，最有把字符串统一的添加到页面中，浏览器还需要把字符串渲染成为对应的标签)
+    //弊端：我们把新拼接的字符串添加到#ul中，原有的三个li的鼠标滑过的效果都消失了(原来标签绑定的事件，都消失了)
+    //优势：事先把内容拼接好，最后统一添加到页面当中，只引发一次回流
+
+    //JS中DOM深入知识：
+    //回流(重排 reflow): 当页面中的HTML结构发生改变(增加、删除、位置发生改变...)，浏览器都需要重新的计算一遍
+    // 最新的DOM结构，重新的对当前的页面进行渲染
+
+    //重绘：某一个元素的部分样式发生改变了(背景颜色),浏览器只需要渲染当前的元素即可
+
+
+    //3. 文档碎片
+//    var frg = document.createDocumentFragment();
+//    for(var i=0;i<ary.length;i++){
+//        var cur =ary[i];
+//        var oLi = document.createElement("li");
+//        oLi.innerHTML="<span>"+ (i+4) +"</span>"+cur.title;
+//        frg.appendChild(oLi);
+//    }
+//    oUl.appendChild(frg);
+//    frg=null; // 手动释放堆内存
+
+
+
+
+
+
+</script>

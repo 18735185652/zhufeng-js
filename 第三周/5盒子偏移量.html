@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            position: relative;
+            position: absolute;
+            position: fixed;
+            position: static;
+            position:inherit;
+        }
+
+        #outer{
+            margin:50px auto;
+            padding:50px;
+            width: 180px;
+            height: 180px;
+            border:10px solid #000;
+            background-color: orange;
+        }
+
+        #inner{
+            padding:50px;
+            width: 80px;
+            height: 80px;
+            border:10px solid #000;
+            background-color: green;
+
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="outer">
+    <div id="inner">
+        <div id="center"></div>
+    </div>
+</div>
+<script>
+
+    var outer = document.getElementById("outer"),
+        inner = document.getElementById("inner"),
+        center = document.getElementById("center");
+
+    //1.parentNode:父亲节点 HTML结构层级关系中上一级元素
+    // center.parentNode //->inner
+    // inner.parentNode //->outer
+    // outer.parentNode //->body
+    // body.parentNode //html
+    // document.parentNode //null
+
+    //2.offsetParent:父级参照物 在同一个平面中，最外层的元素是里面所有元素的父级参照物(和HTML的层级结构没有必然的联系)
+    //->一般来说一个页面中所有元素的父级参照物都是body
+    // console.log(center.offsetParent); //->body
+    // console.log(inner.offsetParent); //->body
+    // console.log(outer.offsetParent); //->body
+    //document.body.offsetParent //->null
+
+    //想要改变父级参照物 需要通过position定位来进行改变:absolute,relative,fixed任意一个值都可以把父级参照物进行修改
+    //
+    // position: relative;
+    // position: absolute;
+    // position: fixed;
+    outer.style.position = "inherit";
+    console.log(center.offsetParent)
+</script>
+</body>
+</html>

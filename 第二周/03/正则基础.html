@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //正则:它就是一个规则，用来处理字符串的一个规则(正则就是用来处理字符串的)
+   //处理：
+    // 1)匹配: 判断一个字符串是否符合我们制定的规则 ->test:reg.test(str)
+//        var reg = /\d/; //包含一个0-9之间的数字
+//        console.log(reg.test("珠")); //false
+//        console.log(reg.test("1")); //true
+//        console.log(reg.test("珠峰2018")); //true
+
+    //  2)捕获:把字符串中符合我们正则规则的内容捕获到
+        var reg = /\d/; //包含一个0-9之间的数字
+        console.log(reg.exec("珠")); //null
+        console.log(reg.exec("1")); //["1", index: 0, input: "1"]
+
+    //2.如何创建一个正则？
+    //字面量方式：
+    var reg = /\d/;
+    //实例创建方式
+    var reg = new RegExp("传的是字符串");
+    //正则的两种创建方式是有区别的
+
+    //3.如何学习正则？
+
+
+
+</script>
+</body>
+</html>

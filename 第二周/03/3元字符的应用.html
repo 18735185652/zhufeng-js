@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+    //[]
+    //1.在中括号出现的所有的字符，都是代表本身意思的额字符，没有特殊的含义
+//    var reg =/^[.]$/;
+//    console.log(reg.test("1")) //false
+//    console.log(reg.test(".")) //true
+    //2.中括号中不识别2位数
+//    var reg =/^[12]$/;//1或者2中的一个
+//    var reg =/^[12-68]$/; //[xyz]结构 1、2-6、8三个中的一个
+//    var reg = /^[\w-]$/;//数字 字母 下划线 -中的一个，因为-后面没值，有值就是到XXX
+
+    //()
+    //1.分组的作用：改变x|y默认的优先级
+//    var reg = /^18|19$/;
+    //18、19、181/189/119、819/1819、...
+//    var reg = /^(18|19)$/;
+    //18、19
+
+    //有效数字的正则  正数 负数 0 小数
+//    1)可以出现小数点也可以不出现小数点，但是一旦出现 后面必须跟着一位或者多位数字
+    //2)最开始可能有 +/- 也可以没有
+    //3）正数部分，一位数可以是0-9之间的一个，多位数不能以0开头
+    //12.3  12   -12  +12  0.2  09
+    //var reg = /^[+-]?(\d|([1-9]\d+))(\.\d+)?$/;
+
+//    简单的手机号验证11位数字，第一位是1
+//    var reg = /^1\d{10}$/
+
+//2.年龄介于18到65之间 18-19 20-59 60-65
+//    var reg = /^(1[8-9]|2[5-9]|6[0-5])$/;
+//    console.log(reg.test(18))
+
+//3.验证邮箱的正则(简版)
+    //左边：数字 字母 下划线 . -
+    //18735185652@qq.com
+    //12345678788@163.com.cn
+    //zhufengpeixun@zhufeng.cn
+
+    var reg = /^[\w.-]+@[0-9a-zA-Z]+(\.[a-zA-Z]{2,4}){1,2}$/;
+  //4.中国标准真实姓名 2-4位汉子
+    var reg = /^[\u4e00-\u9fa5]{2,4}$/;
+
+//    5.身份证号码
+//    var reg = /^\d{17}(\d|x)$/;
+    //13 0828 1990 12 04 06 1 7
+    var reg = /^(\d{2})(\d{4})(\d{4})(\d{2})(\d{2})(\d{2})(\d)(\d|X)$/;
+
+
+
+</script>
+</body>
+</html>

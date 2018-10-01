@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //++i 和 i++
+    //都是自身累加1，在和其他的值进行运算的时候有区别的
+    var i = 5;
+    //    console.log(1 + i++); //6 i=6
+    //    console.log(1 + (++i)) //i=6 7
+    console.log(2 + (i++) + (++i) + (++i) + (i++)); //30
+    console.log(i); //9
+
+
+
+//    function fn(){
+//        var i=10;
+//        return function (n){
+//            console.log(n+(++i));
+//        }
+//    }
+//    var f=fn();
+//    f(10); //21
+//    f(20); //32
+//    fn()(10); //21
+//    fn()(20) //31
+
+
+
+
+    function fn(i){
+        return function (n){
+            console.log(n+(++i));
+        }
+    }
+    var f=fn(13);
+    f(12); //14+12=26
+    f(14); //15+14=29
+    fn(15)(12); //16+12=28
+    fn(16)(13) //17+13=30
+
+</script>
+
+
+</body>
+</html>

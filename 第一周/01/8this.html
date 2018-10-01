@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="div1">有本事点我啊~</div>
+<script>
+    //我们在JS中主要研究的都是函数中的this
+    //JS中的this代表的是当前行为执行的主体；JS中的context代表的是当前行为执行的环境(区域)
+    //例如：张文静在沙县小吃  吃蛋炒饼，this->张文静  context->沙县小吃
+//    function 吃饭(){
+//        this->张文静
+//    }
+//    张文静.吃饭();
+//
+//    ~function(){
+//        张文静.吃饭();
+//    }()
+
+    //this是谁和函数在哪定义的和在哪执行的都没有任何的关系；如何区分this?
+    //1.函数执行,首先看函数名前面是否有" .",有的话 "."前面 是谁，this就是谁;没有 的话,this指向window
+    //2.自执行函数中的this永远都是window
+    //3.给元素的某一个事件绑定方法，当事件触发的时候，执行对应的方法，方法中的this是当前的元素
+
+
+    function fn(){
+        console.log(this);
+    }
+
+    var obj = {fn:fn}
+    fn(); //this-> window
+    obj.fn()//this-> obj
+
+    document.getElementById("div1").onclick=fn;  //fn中的this是div1
+    document.getElementById("div1").onclick=function(){
+        //this ->#div1
+        fn()//this-> window
+    }
+//    function sum(){
+//        fn() //this->window
+//    }
+//    sum()
+//
+//    var oo={
+//        sum:function(){
+//            fn(); // this ->window
+//        }
+//    }
+//
+//    oo.sum(); //oo
+
+</script>
+</body>
+</html>

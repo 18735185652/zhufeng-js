@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+//MVVM 双向数据绑定 MVVM angular 脏值检测  vue 数据劫持+发布订阅模式
+//不兼容低版本  Object.defineProperty
+
+    let obj = {};
+    Object.defineProperty(obj,"school",{
+        configurable:true, //可读
+        // writable:true, //可写(修改)
+        enumerable:true, //默认是不可以枚举的，不可以列出来，不能用for in 循环
+        // value:"珠峰培训",
+        //有了get和set是不可以有writable，value的
+        get(){//获取obj的值时会调用get方法
+            return 'zfpx'
+        },
+        set(val){ //obj.school = 'zfpx2'  set接收一个参数，代表的是设置对象的属性值
+            console.log(val)
+        },
+    })
+
+    //delete obj.school; //删除对象
+    //obj.school = "zfpx"  //{school: "zfpx"}
+    console.log(obj);
+
+    for(let key in obj){
+        console.log(key)
+    }
+</script>
+</body>
+</html>

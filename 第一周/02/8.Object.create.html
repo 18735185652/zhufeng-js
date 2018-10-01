@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    Object.prototype.aaa=function(){};
+    var obj = {name:"张文静",age:"18"};
+    for(var key in obj){
+        //for in 循环在遍历的时候，可把自己私有的和在它所属类原型上扩展的属性和方法都可以遍历到
+        //但是一般情况下，我们遍历一个对象只需要遍历私有的即可，我们可以使用一下的判断进行处理
+//        if(obj.propertyIsEnumerable(key)){
+//            console.log(objkey);
+//        }
+          if(obj.hasOwnProperty(key)){
+              console.log(key)
+          }
+    }
+
+//Object.create(proObj); //创建一个新的对象，但是还要把proObj作为这个对象的原型
+//IE6-8不兼容 ECMA5
+
+    //模拟Object.create
+   var obj={getX:function(){}};
+   function object(o){
+        function Fn(){
+        }
+        Fn.prototype = o;
+        return new Fn;
+   }
+    var newObj = object(obj);
+
+   function Sum(){
+
+   }
+    Sum.prototype = object(obj)
+    Sum.prototype.constructor = Sum;
+    console.dir(Sum)
+
+//var obj={getX:function(){}};
+//var obj2 = Object.create(obj);
+//->obj2
+//    __proto__
+// getX:function(){}
+//__proto__
+//Object
+//obj2.getX();
+//obj.getY = function(){
+//    console.log(2);
+//};
+//obj2.getY();
+
+
+//    var obj ={
+//         constructor:Fn,
+//         getX:function(){}
+//    };//xxxfff000
+//    function Fn(){
+//
+//    }
+//    var obj2={};
+//    for(var key in obj){
+//        if(obj.hasOwnProperty(key)){
+//            obj2[key] = obj[key];
+//        }
+//    }
+//    Fn.prototype=obj;
+//    Fn.prototype.sum = function(){
+//
+//    }
+//    var f = new Fn;
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

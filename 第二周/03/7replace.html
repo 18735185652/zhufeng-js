@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //replace:把原有的字符替换成新的字符
+    //在不使用正则的情况下，每当执行一次只能替换一个字符
+    var str = "zhufeng2015zhufeng2016";
+//    str = str.replace("zhufeng","zhufengpeixun").replace("zhufeng","zhufengpeixun");//没有实现需求
+//    console.log(str);  //zhufengpeixunpeixun2015zhufeng2016
+    str = str.replace(/zhufeng/g,"zhufengpeixun")
+    console.log(str);//zhufengpeixun2015zhufengpeixun2016
+    //replace第一项的值是一个正则他，它的实现原理
+    //首先我们和exec捕获一样，把所有和我们正则匹配的都捕获到,然后把捕获的内容替换成我们需要替换的新内容
+    // /zhufeng/g 按照这个正则把str中所有可以匹配的都捕获到，然后统一都替换成我们的“zhufengpeixun”
+
+    var str = "zhufeng2015zhufeng2016";
+//    str = str.replace(/zhufeng/g,function(){
+//        console.log(arguments);
+//        return "zhufengpeixun"
+//    })
+    //第二个参数换成一个函数
+    //1）匿名函数执行多少次，取决于正则能在字符串中捕获多少次 ->正则捕获俩次，所以我们的匿名函数也执行2次
+    //2)我们每一次执行匿名函数，里面传递的参数值arguments和我们自己通过exec捕获到的结果是非常类似的(即使正则有分组，我们同样可以arguments
+    // 获取到分组捕获到的内容)
+    //3）return 你返回的结果是啥，就相当于把当前大正则捕获的内容替换成你返回的内容
+    var str = "zhufeng2015zhufeng2016";
+    var reg = /zhufeng(\d+)/g
+    str = str.replace(reg,function(){
+//        console.log(arguments)
+//        console.log(arguments[0])//每一次匿名函数执行把我们大正则捕获的内容获取到
+//        console.log(66,RegExp.$1)
+        return 1;//我返回的1把每一次大正则匹配的内容都替换了
+    })
+    console.log(str)//"zhufeng1zhufeng1"
+//    RegExp.$1 获取第一个分组捕获到的内容
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

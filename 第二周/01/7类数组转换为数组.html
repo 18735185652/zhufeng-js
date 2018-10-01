@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<div name="zhufeng"></div>
+<div name="zhufeng"></div>
+<div></div>
+<div></div>
+<div></div>
+<body>
+<script>
+    // var oLis = document.getElementsByTagName("div");
+    // console.dir(oLis); //->HTMLCollection的实例，它也是一个类数组集合
+    // oLis=document.getElementsByName("zhufeng") //->NodeList 节点集合 也是类数组集合
+
+
+
+    var oLis = document.getElementsByTagName("div");
+    //->标准浏览器
+    var ary = Array.prototype.slice.call(oLis);
+    //非标准
+    for(var i=0;i<oLis.length;i++){
+        ary[ary.length]=oLis[i];
+    }
+
+    console.log(ary); //Array.prototype.slice: 'this' 不是 JavaScript 对象
+    //在IE6-8浏览器中，不支持借用数组的slice实现将元素集合(节点集合)的类数组转换为数组，
+    // 报错：Array.prototype.slice: 'this' 不是 JavaScript 对象
+    //但是对于arguments借用数组的方法是不存在任何兼容性问题的
+    //
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

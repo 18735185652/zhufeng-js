@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    exec 正则的捕获
+    每一次捕获的时候都是先进行默认的匹配，如果没有匹配成功的，捕获的结果是null，
+    只有有匹配的内容我们才能捕获到；
+    1.捕获的内容格式
+    1)捕获道德内容是一个数组，数组中的第一项是当前大正则捕获的内容
+//        index:捕获内容在字符串中开始的索引的位置
+//        input:捕获的原始字符串
+    //2.正则捕获的特点
+    //1)懒惰性 ->每一次执行exec只能捕获到第一个匹配的内容，在不进行任何处理的情况下，
+    //在执行多次捕获，捕获的还是第一个捕获的内容
+    //lastIndex:是正则每一次捕获在字符串中开始查找的位置，默认值是0
+    //2)
+//    var reg = /\d+/;
+//    var str="zhufeng2015peixun2016"
+//    console.log(reg.lastIndex) //0
+//    var res = reg.exec(str)
+//    console.log(res); //["2015", index: 7, input: "zhufeng2015peixun2016"]
+//    我们第二次通过exec捕获的内容还是第一个“2015”
+//    console.log(reg.lastIndex) //0 说明我们第二次捕获的时候也是要从字符串索引0处开始查找
+//    res = reg.exec(str)
+//    console.log(res);//["2015", index: 7, input: "zhufeng2015peixun2016"]
+
+
+
+//2）如何解决懒惰性？在正则的末尾加一个修饰符 "g"
+//修饰符：i m g
+  //global(g) :全局匹配
+  //ignoreCase(i):忽略大小写
+  //multiline(m):多行匹配
+    //原理：加了全局修饰符g，正则每一次捕获结束后，我们的lastIndex的值都变为了最新的额值，
+    //下一次捕获从最新的位置开始查找，这样就可以把所有需要捕获的内容都捕获到
+//    var reg = /\d+/g;
+//    var str="zhufeng2015peixun2016"
+//    console.log(reg.lastIndex); //0
+//    reg.exec(str) //[2015...]
+//    console.log(reg.lastIndex); //11
+//    reg.exec(str) //[2016...]
+//    console.log(reg.lastIndex); //11
+//    console.log(reg.exec(str)) //null
+
+    //3)自己编写程序获取正则捕获所有的内容(一定不要忘记加g，否则会死循环)
+//    var reg = /\d+/g;
+//        var str="zhufeng2015peixun2016yangfan2018";
+//        var ary = [];
+//        var res = reg.exec(str);
+//        while(res){
+//            ary.push(res[0]);
+//            res = res = reg.exec(str);
+//        }
+//    console.log(ary); //["2015", "2016", "2018"]
+    //4）贪婪性：正则的每一次捕获都是按照匹配最长的结果捕获的，例如：2 符合正则 2015也符合正则，默认捕获的是2015
+    //
+//        var reg = /\d+/g; //出现1到个0-9之间的数字
+//        var str="zhufeng2015peixun2016yangfan2018";
+//        console.log(reg.exec(str));//["2015"...]
+
+//    5)如何解决正则的贪婪性 -》在量词元字符后面添加一个？即可
+    //?在正则中有很多的作用：
+    //放在一个普通的元字符后面代表出现0-1次， /\d?/ ->出现0-1次数字 数字可能出现可能不出现
+    //放在一个量词的元字符后面是取消捕获消息的贪婪性
+//    var reg = /\d+?/g; //出现1到个0-9之间的数字
+//    var str="zhufeng2015peixun2016yangfan2018";
+////    console.log(reg.exec(str));//["2"...]
+//    var ary = [],res = reg.exec(str);
+//    while(res){
+//        ary.push(res[0]);
+//        res = reg.exec(str);
+//    }
+//    console.log(ary) //["2", "0", "1", "5", "2", "0", "1", "6", "2", "0", "1", "8"]
+
+//3.字符串中的match方法-> 把所有和正则匹配的字符都获取到
+    var reg = /\d+?/g; //出现1到个0-9之间的数字
+    var str="zhufeng2015peixun2016yangfan2018";
+    var ary = str.match(reg)
+    console.log(ary) //["2", "0", "1", "5", "2", "0", "1", "6", "2", "0", "1", "8"]
+    //虽然在当前的情况下match比我们的额exec更加的简洁一些，但是match中存在自己的出来不了的问题
+    //在分组捕获的情况下，match只能捕获到大正则匹配的内容，而对于小正则捕获的内容是无法获取的
+    
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

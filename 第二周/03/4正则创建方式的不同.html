@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var name = "zhufeng"
+    //在字面量方式中，我们//之间抱起来的所有的内容都是元字符，有的具有特殊的额意义，大部分都是代表本身含义的普通的元字符
+//    var reg = /^\d+"+name+"\d+$/; //拼接的第一个引号不是拼接，后面的+代表的是让"出现一次或多次，然后是nam，最后让 e出现一次或多次
+//    console.log(reg.test("2015zhufeng2016")); // false
+//    console.log(reg.test('2015"""nameeeee"2016')) //true
+
+    //对于这样的需求，我们只能用实例创建的方式
+    var reg = new RegExp("\\d+" +name+ "\\d+");
+    console.log(reg.test("2015zhufeng2016")); // true
+
+    //字面量创建方式和实例创建方式在正则中的区别：
+//    1.字面量方式中出现的一切都是元字符，所以不能进行变量值得拼接，而实例创建的方式是可以的
+//    2.字面量方式中直接写 \d就可以，而实例中需要把它转义 \\d
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

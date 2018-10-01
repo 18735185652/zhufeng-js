@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //如何查找当前作用域的上一级作用域？
+    //看当前函数是在哪个作用域下定义的，那么他的上级作用域就是谁 ->和函数在哪执行的没有任何的关系
+    var num = 12;
+    function fn(){
+        var num =12;
+        return function(){
+            console.log(num);
+        };
+    }
+    var f=fn();
+    f();
+    ~function(){
+        var num = 1200;
+        fn();
+    }();
+
+</script>
+
+</body>
+</html>

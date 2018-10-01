@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <p>{{a.a.b}}</p>
+    <div>{{b}}</div>
+    <input type="text" v-model = "b">
+</div>
+<script src="./mvvm.js"></script>
+<script>
+
+let zhufeng= new Zhufeng({
+    el:"#app",
+    data:{
+        a:{a:{b:'是a'}}, //Object.defineProperty(obj,"a",1)
+        b:"是b",
+        c:"ok"
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

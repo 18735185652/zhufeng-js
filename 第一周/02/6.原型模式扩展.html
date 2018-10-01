@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    //在原型模式中,this常用的两种情况：
+//    1.this.xxx=xxx; this ->当前类的实例
+//    2. 在某一个方法中的this 看执行的时候.前面是谁"."this就是谁
+//    1)需要先确定this是谁
+//    2)把this替换成对应的代码
+//    3)按照原型链查找的机制，一步步的查找结果
+
+//    function Fn(){
+//        this.x = 100;
+//        this.y = 200;
+//        this.getY=function(){
+//            console.log(this.y)
+//        }
+//    }
+//    Fn.prototype={
+//        constructor:Fn,
+//        y:300,
+//        getX:function(){
+//            console.log(this.x)
+//        },
+//        getY:function(){
+//            console.log(this.y)
+//        }
+//    }
+//
+//    var f = new Fn;
+//    f.getX();
+//    Fn.prototype.getX()//undefined
+//
+//    f.getY()//200
+//    f.__proto__.getY() //300
+
+
+    Array.prototype.myUnique=function(){
+        var obj={};
+        for(var i=0;i<this.length;i++){
+            var cur = this[i];
+            if(obj[cur]==cur){
+                this[i]=this[this.length-1];
+                this.length--;
+                i--;
+                continue;
+            }
+            obj[cur]=cur;
+        }
+        obj=null;
+        return this;//目的是为了实现链式写法
+    }
+    var ary=[20,10,20,30,20,10,50,5,100]
+
+   //  链式写法：执行完成数组的一个方法可以紧接着执行下一个方法
+   //  原理：
+   //  ary为什么可以sort方法？->因为sort是Array.prototype上公有的方法，而数组ary是Array的一个实例，所以ary可以使用sort
+   //  方法->数组才能使用我们Array上定义的属性和方法
+   //  sort执行完成的返回值是一个排序后的"数组",可以继续执行reverse
+   // reverse执行完成的返回值是一个排序后的“数组”,可以继续执行pop
+   //  pop执行返回的结果是被删除的末尾的元素，不是一个数组了，所以在执行push就会报错
+    ary.myUnique().sort(function(a,b){
+        return a-b
+    }).reverse().pop()
+
+    console.log(ary)
+
+    //在数组的原型上有一个方法叫做slice，我们要求大家自己回去写一个mySlice
+    //mySlice要求和原来的slice功能一模一样
+    Array.prototype.mySlice=function(){
+
+    }
+
+//    考虑的情况
+//    slice(n,m)
+//    slice(n)
+//    slice()
+//    n和m是负数什么情况
+//    n<m
+//    n和m的值超过数组的长度了
+//    n和m不是有效数字...
+
+</script>
+</body>
+</html>

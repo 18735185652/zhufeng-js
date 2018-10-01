@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>原型继承</title>
+</head>
+<body>
+<div class="div1"></div>
+<script>
+        var div1 =document.querySelector(".div1");
+        console.dir(div1)
+//    #div1.__proto__->HTMLDivElement.prototype->HTMLElement.prototype->Element.prototype->Node.prototype
+//    ->EventTarget.prototype->Object.prototype
+    function myObject(){
+
+    }
+myObject.prototype={
+        constructor:Object,
+        hasOwnProperty:function(){}
+    }
+    function myEventTarget(){
+
+    }
+    myEventTarget.prototype = new myObject;
+    myEventTarget.prototype.addEventListener=function(){}
+
+    function myNode(){
+        this.x=10
+    }
+    myNode.prototype = new myEventTarget;
+    myNode.prototype.createElement=function(){}
+        myNode.prototype.constructor = myNode;
+    var n = new myNode;
+
+    console.dir(n);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script src="../utils.js"></script>
+<script>
+//    正则的捕获：正则的exec方法，字符串的match方法、字符串的replace方法
+
+//    replace：将原有的字符替换成我们新的字符
+//1)在不使用正则的情况下，执行一次replace只能替换字符串中的一个
+//2)zai replace中我们可以一次批量的把所有正则匹配的内容都替换掉 ，replace是支持正则的
+//var str = "zhufengpeixun~zhufengjiaoyu~";
+
+//    str = str.replace("zhufeng","珠峰").replace("zhufeng","珠峰");
+//      str = str.replace(/zhufeng/g,"珠峰")
+//    console.log(str)
+//原理：先按照正则制定的规则到我们字符串中把正则匹配的内容捕获到，然后在每一次捕获到之后，
+//        都把捕获的内容替换成新的内容
+
+//2.获取一个字符串中出现次数最多的字符,并且获取出现的次数
+    var str="zzzzzhufengpeixunyangfanqihang";
+     // 1)获取每一个字符出现的次数
+    var obj = {};
+    str.replace(/[a-z]/gi,function(){
+        var val = arguments[0];
+        obj[val] >= 1 ? obj[val]+=1 : obj[val] = 1
+//        if(obj[val] >=1){
+//            obj[val]+=1
+//        }else{
+//            obj[val] = 1
+//        }
+    })
+    console.log(obj)
+//    //2）获取最多出现的次数
+//    var maxNum = 0;
+//    for(var key in obj){
+//        obj[key]>maxNum?maxNum = obj[key] : null;
+//    }
+//    console.log(maxNum)
+//
+//   -//3.把所有符合出现maxNum次数的都获取到
+    // var ary = [];
+    //  for(var key in obj){
+    //     obj[key]===maxNum?ary.push(key):null
+    // }
+
+    // console.log("整个字符串当中出现次数最多的字符是："+ary.toString()+"，出现了"+maxNum+"次")
+
+    //3模板引擎实现的原理
+//
+//    var str=" my name is {0}, my age is {1},i come from {2}, i love {3}";
+//    var ary =["张文静","18","china","javascript"];
+//
+//    str = str.replace(/{(\d+)}/g,function(){
+//        return ary[arguments[1]]
+//    })
+//    console.log(str)
+
+    //思考题
+    //1. "2015-9-22 13:10:0" ->2015年9月22日 13时10分00秒
+    //2. 把一个字符串中所有单词的首字母大写 "zhu feng pei xun" ->Zhu Feng Pei Xun
+
+    //4)需求 queryUrlParameter
+//    var str = "https://www.baidu.com/?mid=10000&cid=123456&app=1.0";
+//    var reg = /([^?=&]+)=([^?=&]+)/g;
+
+//    var obj = {};
+//    str.replace(reg,function(){
+//        obj[arguments[1]] = arguments[2]
+//    })
+//    console.log(obj)
+
+//    var obj ={};
+//    var res = reg.exec(str);
+//    while(res){
+//        obj[res[1]] = res[2];
+//        res = reg.exec(str);
+//    }
+//    console.log(obj)
+
+//var str = "https://www.baidu.com/?mid=10000&cid=123456&app=1.0";
+//var objs = utils.queryUrlParameter(str);
+//console.log(objs)
+
+//1. "2015-9-22 13:10:0" ->2015年9月22日 13时10分00秒
+
+//设定好我们目标时间格式，把数组中对应的项替换到指定的区域内；
+//    var resStr = "{0}年{1}月{2}日 {3}时{4}分{5}秒"
+//    var ary = ["2015","6","10","14","53","0"];
+//    var reg = /{(\d+)}/g;
+//    //{0}替换成2015：首先我们要获取{0}，而且我们还要获取那个0，这个0相当于ary数组中的索引
+//    //我们要做的就是把对应索引的内容替换我们的{0}
+//    //每一次都会把正则匹配的内容捕获到：如果没有分组，一般是三个参数：大正则捕获的内容，开始的索引，捕获的字符串
+//    // 但是如果有需要捕获的分组，参数的格式就不确定了，从arguments[1]开始就是对应分组的内容
+//    //arguments[0]是大正则捕获的内容
+//    resStr = resStr.replace(reg,function(){
+//        var num = arguments[1];
+//        var val = ary[num];
+//        val<10?val="0"+val:void 0;
+//        return val;
+//    })
+//    console.log(resStr)
+
+
+
+//var str = "2018-9-24 14:06:00",reg = /^(\d{4})[-/](\d{1,2})[-/](\d{1,2}) +(\d{1,2}):(\d{1,2}):(\d{1,2})$/,ary = [];
+//
+//str.replace(reg,function(){
+//   ary = (ary.slice.call(arguments)).slice(1,7);
+//})
+//var resStr = "{0}年{1}月{2}日 {3}时{4}分{5}秒"
+//var reg = /{(\d+)}/g;
+//resStr = resStr.replace(reg,function(){
+//        var num = arguments[1];
+//        var val = ary[num];
+//        val.length === 1 ? val ="0" + val : void 0;
+//        return val;
+//    })
+//    console.log(resStr)
+
+//在String的原型上实现一个方法：把指定时间歌诗达额字符串换成我们想要的各种形式;
+
+
+String.prototype.myFormatTime = function(){
+    var reg = /^(\d{4})(?:-|\/|\.|:)(\d{1,2})(?:-|\/|\.|:)(\d{1,2})(?:\s+)(\d{1,2})(?:-|\/|\.|:)(\d{1,2})(?:-|\/|\.|:)(\d{1,2})$/g
+    var ary = [];
+    this.replace(reg,function(){
+        ary = ary.slice.call(arguments).slice(1,7);
+        console.log(ary)
+    });
+    var format = arguments[0] || "{0}年{1}月{2}日 {3}时{4}分{5}秒"
+    return format.replace(/{(\d+)}/g,function(){
+        var val = arguments[1]
+        return ary[val].length===1 ? "0" + ary[val] : ary[val];
+        //return ary[arguments[1]]
+    })
+}
+
+
+var str = "2018.9.24 14:6:09"
+console.log(str.myFormatTime())
+
+
+//var str = "2018.9.24 14:06:00"
+//console.log(utils.myFormatTime())
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
