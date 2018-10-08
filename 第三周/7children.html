@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<div id="div1">
+    <div></div>
+    <div id="box"></div>
+    <div id="two">
+        <p></p>
+        <p></p>
+    </div>
+    <p></p>
+    <p></p>
+    <p></p>
+</div>
+<body>
+ <script src="./../第二周/utils.js"></script>
+ <script>
+ var oDiv = document.getElementById("div1");
+ var oBox = document.getElementById("box");
+ var two = document.getElementById("two");
+
+ //获取当前元素下所有元素节点
+ //首先获取所有的子节点(childNodes),在所有的子节点中把元素节点过滤出来 nodeType===1
+ 
+ //-》如果多传递一个标签名的话，我们还要在获取的元素集合中把对应标签名的进行二次筛选
+//  function children(curEle,tagName){
+//     var ary = [];
+//     /* IE6-8不能使用内置的children属性，我们自己代码实现 */
+//     if(/MSIE (6|7|8)/.test(navigator.userAgent)){
+//         var nodeList = curEle.childNodes;
+//         for(var i=0,len=nodeList.length;i<len;i++){
+//             var curNode = nodeList[i];
+//             if(curNode.nodeType ===1){
+//                 ary[ary.length] = curNode;
+//             }
+//         }
+//     }else{
+//         //->标准浏览器，我们直接使用children即可，但是这样获取的是一个类数组集合，为了和IE6-8
+//         //下保持一致，我们借用数组原型上的slice，把类数组转化为数组
+//         ary = Array.prototype.slice.call(curEle.children);
+//     }
+//     //二次筛选
+//     if(typeof tagName === "string"){
+//         for(var k = 0; k < ary.length;k++){
+//             var curEleNode = ary[k];
+//             if(curEleNode.nodeName.toLowerCase()!==tagName.toLowerCase()){
+//                 //不是我想要的那个标签
+//                 ary.splice(k,1);
+//                 k--;
+//             }
+//         }
+//     }
+
+//     return ary;
+//  }
+
+//  console.log(children(oDiv,"p"))
+//  console.log(utils.prev(two))
+ 
+var str = "abaa"
+console.log(utils.strMax(str))
+ </script>   
+</body>
+</html>
