@@ -17,7 +17,7 @@
     function myObject(){
 
     }
-myObject.prototype={
+    myObject.prototype={
         constructor:Object,
         hasOwnProperty:function(){}
     }
@@ -32,7 +32,7 @@ myObject.prototype={
     }
     myNode.prototype = new myEventTarget;
     myNode.prototype.createElement=function(){}
-        myNode.prototype.constructor = myNode;
+    myNode.prototype.constructor = myNode;
     var n = new myNode;
 
     console.dir(n);
