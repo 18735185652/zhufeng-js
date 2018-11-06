@@ -10,12 +10,11 @@ var utils =(function(){
             return Array.prototype.slice.call(likeAry);
         }
         var ary = [];
-        for(var i=0;i<likeAry.length;i++){
-            ary[ary.length]=likeAry[i]
+        for(var i = 0;i < likeAry.length;i++){
+            ary[ary.length] = likeAry[i]
         }
         return ary;
     }
-
     //把JSON格式的字符串转换为json格式的对象
     // jsonParse:function(str){
     //     var val = null;
@@ -29,7 +28,8 @@ var utils =(function(){
     function jsonParse(jsonStr){
         return 'JSON' in window ? JSON.parse(jsonStr) : eval("(" + jsonStr+")");
     }
-        //获取地址栏里拼接的参数
+
+     //获取地址栏里拼接的参数
     function queryUrlParameter(str){
         var reg = /([^?=&]+)=([^?=&]+)/g;
         var res = reg.exec(str);
@@ -97,7 +97,7 @@ var utils =(function(){
     }
     //win:编写一个有关于操作浏览器盒子模型的方法
     function win(attr,value){
-        if(typeof attr==="undefined"){
+        if(typeof attr === "undefined"){
             return document.documentElement[attr] || document.body[attr]
         }
         document.documentElement[attr] = value;
@@ -164,7 +164,7 @@ var utils =(function(){
         while(pre&&pre.nodeType!==1){ //不等于1说明不是元素节点
             pre =pre.previousSibling ;
         }
-        // return pre;
+        return pre;
     }
 
     //获取下一个弟弟元素节点
@@ -206,8 +206,8 @@ var utils =(function(){
         var ary=[];
         var pre = this.prev(curEle);
         var nex = this.next(curEle);
-        pre?ary.push(pre):null;
-        nex?ary.push(nex):null;
+        pre ? ary.push(pre) : null;
+        nex ? ary.push(nex) : null;
         return ary
     }
     //siblings:获取所有的兄弟元素节点
@@ -218,22 +218,158 @@ var utils =(function(){
     function index(curEle){
         return this.prevAll(curEle).length;
     }
-
     //firstChild 获取第一个元素子节点
     function firstChild(curEle){
         var chs = this.children(curEle);
         return chs.length > 0 ? chs[0] : null;
     }
-
      //lastChild 获取最后一个元素子节点
-     function lastChild(curEle){
+    function lastChild(curEle){
         var chs = this.children(curEle);
         return chs.length > 0 ? chs[chs.length-1] : null;
     }
+    //append:向指定容器的末尾追加元素
+    function append(newEle,container){
+        container.appendChild(newEle)
+    }
+    //prepend:向指定容器的开头追加元素 把新的元素添加到容器中第一个子元素节点的前面
+    //如果一个元素子节点都没有，就放到末尾即可
+    function prepend(newEle,container){
+        var fir = this.firstChild(container);
+        if(fir){
+            container.insertBefore(newEle,fir);
+            return;
+        }
+        container.appendChild(newEle)
+    }
+    //insertBefore :把新元素追加到指定元素的前面
+    function insertBefore(newEle,oldEle){
+        oldEle.parentNode.insertBefore(newEle,oldEle);
+    }
+    //insertAfter：把新元素追加到指定元素的后面
+    //相当于追加到oldEle弟弟元素的前面,如果弟弟不存在，也就是当前元素已经是最后一个了，我们把新
+    // 的元素放在最末尾即可
+    function insertAfter(newEle,oldEle){
+         var nex = this.next(oldEle);
+         if(nex){
+             oldEle.parentNode.insertBefore(newEle,nex);
+             return
+         }
+         oldEle.parentNode.appendChild(newEle);
+    }
+    //验证当前元素中是否包含className这个类名
+    function hasClass(curEle,className){
+        //curEle.className //"box bg"
+        var reg = new RegExp("(^| +)"+className+"( +|$)");
+        return reg.test(curEle.className)
+    }
 
+    //给元素增加样式类名
+    function addClass(curEle,className){
+        //为了防止className传递进来的值包含多个样式类名，我们把传递进来的字符串按照一到多个空格拆分成数组中的每一项
+        var ary = className.replace(/(^ +| +|$)/g,"").split(/ +/g);
+        for(var i=0;i<ary.length;i++){
+            curName=ary[i];
+            if(!this.hasClass(curEle,curName)){
+                curEle.className+=" "+curName;
+            }
+        }
+    }
+    //给元素移除样式类名
+    function remove(curEle,className){
+        var ary = className.split(/ +/g);
+        for(var i=0;i<ary.length;i++){
+            curName=ary[i];
+            if(this.hasClass(curEle,curName)){
+                var reg = new RegExp("(^| +)"+curName+"( +|$)","g");
+                curEle.className = curEle.className.replace(reg," ")
+            }
+        }
+    }
+    function getElementsByClassName(className,context){
+        context = context||document;
+        if(flag){
+            return this.listToArray(context.getElementsByClassName(className))
+        }
+        //IE 6-8
+        var classNameAry = className.replace(/(^ +| +$)/g,"").split(/ +/g);
+        var ary = [];
+        var nodeList = context.getElementsByTagName("*");
+        for(var i=0;i<nodeList.length;i++){
+            var curNode = nodeList[i];
+            var isOk =true;
+            for(var k=0;k<classNameAry.length;k++){
+                var reg = new RegExp("(^| +)"+classNameAry[k]+"( +|$)");
+                if(!reg.test(curNode.className)){
+                    isOk = false;
+                    break;
+                }
+            }
+            if(isOk){
+                ary.push(curNode.className)
+            }
+        }
+        return ary;
+    }
+    /* 给当前元素的某一个样式属性设置值(增加在行内样式上) */
+    function setCss(curEle,attr,value){
+        //在JS中设置float样式值得话也需要处理兼容
+        if(attr ==="float"){
+            curEle["style"]["cssFloat"]=value;
+            curEle["style"]["styleFloat"]=value;
+        }
+        //如果打算设置的是元素的透明度，我们需要设置两套样式来兼容所有浏览器
+        if(attr==="opacity"){
+            curEle["style"][attr]=value
+            curEle["style"]["filter"]="alpha(opacity=" + value * 100 +")";
+            return;
+        }
+        //对于某些样式属性，如果传递进来的值没有加单位，我们需要把单位默认的补充上
+        var reg = null;
+        reg = /^(width|height|top|bottom|left|right|((margin|padding)(Top|Bottom|Left|Right)?))$/;
+        if(reg.test(attr)){
+            if(!isNaN(value)){ //是有效数字
+                value += "px";
+            }
+        }
+        curEle["style"][attr]=value;
 
-
-
+    }
+    //给当前元素批量的设置样式属性值
+    function setGroupCss(curEle,options){
+        //通过检测options的数据类型，如果不是一个对象，则不能进行批量的设置
+        options = options || 0;
+        if(Object.prototype.toString.call(options) !=="[object Object]"){
+            return;
+        }
+        //遍历对象中的每一项，调取setCss方法一个个的进行设置即可
+        for(var key in options){
+            /* 私有属性才调取 */
+            if(options.hasOwnProperty(key)){
+                this.setCss(curEle,key,options[key]);
+            }
+        }
+    }
+    //此方法实现了获取，单独设置，批量设置元素的样式值
+    function css(curEle){
+        argTwo = arguments[1];
+        if(typeof argTwo === "string"){//第二个参数值是一个字符串，这样的话很有可能就是在获取样式，为什么是很有可能呢？
+        //因为还需要判断是否存在第三个参数，如果第三个参数存在的话则不是获取，而是在单独的设置样式
+            var argThree = arguments[2];
+            if(!argThree){ //第三个参数不存在
+                // return this.getCss(curEle,argTwo);
+                return this.getCss.apply(this,arguments);
+            }
+            //第三个参数存在则为单独设置
+            //this.setCss(curEle,argTwo,argThree);
+            this.setCss.apply(this, arguments);
+        }
+        argTwo = argTwo||0;
+        if(argTwo.toString()==="[object Object]"){
+            //批量设置样式属性值
+            this.setGroupCss.apply(this,arguments);
+        }
+    }
 
     return  {
         listToArray:listToArray,
@@ -255,10 +391,18 @@ var utils =(function(){
         siblings:siblings,
         index:index,
         firstChild:firstChild,
-        lastChild:lastChild
+        lastChild:lastChild,
+        append:append,
+        prepend:prepend,
+        insertBefore:insertBefore,
+        insertAfter:insertAfter,
+        hasClass:hasClass,
+        addClass:addClass,
+        remove:remove,
+        getElementsByClassName:getElementsByClassName,
+        setCss:setCss,
+        setGroupCss:setGroupCss,
+        css:css
     }
-
-
-
 
 })();
