@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+    //call继承  把父类私有的属性克隆一份一模一样的给子类的私有属性
+    //原型继承  把父类私有的和公有的 给子类公有的
+
+
+
+
+
+    //冒充对象继承：把父类私有的和公有的，克隆一份一模一样的给子类私有的
+    function A(){
+        this.x = 100;
+    }
+    A.prototype.getX=function(){
+        console.log(this.x);
+    }
+
+    function B(){
+        var temp = new A;
+        for(var key in temp){
+            this[key]=temp[key];
+        }
+        temp=null;
+    }
+    var c = new B;
+    console.log(c.x)
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>中间类继承法</title>
+</head>
+<body>
+<script>
+//    function avgFn(){
+//        Array.prototype.sort.call(arguments,function(a,b){
+//            return a-b;
+//        })
+//        Array.prototype.pop.call(arguments);
+//        Array.prototype.shift.call(arguments);
+//        return (eval(Array.prototype.join.call(arguments,"+"))/arguments.length).toFixed(2)
+//    }
+//    var a = avgFn(4, 5, 6, 7, 3);
+//    console.log(a);
+
+    function avgFn(){
+       arguments.__proto__=Array.prototype;
+       arguments.sort(function(a,b){
+           return a-b;
+       })
+       arguments.pop();
+       arguments.shift();
+        return (eval(arguments.join("+"))/arguments.length).toFixed(2)
+    }
+
+    var a = avgFn(10,20,30,10,30,40,40);
+    console.log(a);
+</script>
+</body>
+</html>

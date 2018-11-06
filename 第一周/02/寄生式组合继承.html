@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function A(){
+        this.x = 100;
+    }
+    A.prototype.getX=function(){
+        console.log(this.x); //
+    }
+
+    function B(){
+        A.call(this);  //n.x=100
+    }
+    B.prototype = objectCreate(A.prototype); //原型上有 n.x getX...
+    B.prototype.constructor =B;
+
+    var n = new B;
+    console.dir(n)
+
+    function objectCreate(o){
+        function fn(){
+
+        }
+        fn.prototype=o;
+        return new fn;
+    }
+
+
+</script>
+</body>
+</html>

@@ -15,6 +15,19 @@ var utils =(function(){
         }
         return ary;
     }
+<<<<<<< HEAD
+=======
+    /* 对象深浅拷贝 */
+    function copyDeep(obj,deep){
+         var o = obj instanceof Array ? [] :{};
+         for(key in obj){
+             var val = obj[key];
+             o[key] = (deep && typeof val === "object" ? copyDeep(val,deep) : val);
+         }
+         return o
+    }
+
+>>>>>>> 33e1078ff5a82f8c3cd5a8107c7abb9716f1ea51
     //把JSON格式的字符串转换为json格式的对象
     // jsonParse:function(str){
     //     var val = null;
@@ -334,6 +347,7 @@ var utils =(function(){
         }
         curEle["style"][attr]=value;
 
+<<<<<<< HEAD
     }
     //给当前元素批量的设置样式属性值
     function setGroupCss(curEle,options){
@@ -370,6 +384,53 @@ var utils =(function(){
             this.setGroupCss.apply(this,arguments);
         }
     }
+=======
+    function jsonp({url,params,cb}){
+        return new Promise((resolve,reject)=>{
+            window[cb] = function(data){
+                resolve(data);
+                document.body.removeChild(script)
+            }
+            params = {...params,cb}
+            let arr = [];
+            for(let key in params){
+                // arr.push(`${key}=${params[key]}`)
+                arr.push(""+key+"="+params[key]+"")
+            }
+            let script = document.createElement("script");
+            // script.src = `${url}?${arr.join("&")}`;
+            script.src = ""+url+"?"+arr.join("&")+""
+            document.body.appendChild(script);
+        })
+
+    }
+
+    function jsonp(url,params,cb){
+         return new Promise(resolve,reject){
+             window[cb] = function(data){
+                 resolve(data);
+             }
+             var arr = [];
+             params = {...params,cb};
+             for(key in params){
+                 arr.push(""+key+"="+params[key]+"");
+             }
+             var script = document.createElement("script");
+             script.src = ""+url+"?"+arr.join("&")+""
+             document.body.appendChild(script);
+        }
+    }
+    // jsonp({
+    //     url:"https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su",
+    //     params:{
+    //         wd:"a"
+    //     },
+    //     cb:"show"
+    // }).then(data=>{
+    //     console.log(data)
+    // })
+
+>>>>>>> 33e1078ff5a82f8c3cd5a8107c7abb9716f1ea51
 
     return  {
         listToArray:listToArray,
@@ -392,6 +453,7 @@ var utils =(function(){
         index:index,
         firstChild:firstChild,
         lastChild:lastChild,
+<<<<<<< HEAD
         append:append,
         prepend:prepend,
         insertBefore:insertBefore,
@@ -403,6 +465,9 @@ var utils =(function(){
         setCss:setCss,
         setGroupCss:setGroupCss,
         css:css
+=======
+        copyDeep:copyDeep
+>>>>>>> 33e1078ff5a82f8c3cd5a8107c7abb9716f1ea51
     }
 
 })();
