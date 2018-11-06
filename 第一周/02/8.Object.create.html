@@ -26,26 +26,31 @@
 //IE6-8不兼容 ECMA5
 
     //模拟Object.create
-   var obj={getX:function(){}};
-   function object(o){
-        function Fn(){
-        }
-        Fn.prototype = o;
-        return new Fn;
-   }
-    var newObj = object(obj);
+   // var obj={
+   //      getX:function(){
+   //     }
+   //  };
+   // function object(o){
+   //
+   //     function Fn(){
+   //      }
+   //      Fn.prototype = o;
+   //      return new Fn;
+   // }
+   //  var newObj = object(obj);
+   //  console.log(newObj);
+   //
+   //  function Sum(){
+   //
+   // }
+   //  Sum.prototype = object(obj)
+   //  Sum.prototype.constructor = Sum;
+   //  console.dir(Sum)
 
-   function Sum(){
-
-   }
-    Sum.prototype = object(obj)
-    Sum.prototype.constructor = Sum;
-    console.dir(Sum)
-
-//var obj={getX:function(){}};
-//var obj2 = Object.create(obj);
-//->obj2
-//    __proto__
+var obj={getX:function(){}};
+var obj2 = Object.create(obj);
+    console.log(obj2);
+    //    __proto__
 // getX:function(){}
 //__proto__
 //Object
