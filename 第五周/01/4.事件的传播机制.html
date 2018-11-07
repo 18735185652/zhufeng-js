@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,div{
+            margin:0;
+            padding:0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        #outer{
+            margin:20px auto;
+            width: 300px;
+            height: 300px;
+            padding:20px;
+            background-color: #008000;
+        }
+        #inner{
+            margin:20px auto;
+            width: 200px;
+            height: 200px;
+            padding:20px;
+            background-color: red;
+        }
+        #center{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="outer" >
+    <div id="inner">
+        <div id="center"></div>
+    </div>
+</div>
+
+<script>
+    //事件的默认传播机制
+    //捕获阶段：从外向内依次查找元素
+    //目标阶段：当前事件源本身的操作
+    //冒泡阶段： 从内到外依次触发相关的行为(我们最常用的就是冒泡阶段)
+
+
+
+
+    var outer = document.getElementById("outer")
+    var inner = document.getElementById("inner")
+    var center = document.getElementById("center")
+
+    //使用dom0级事件绑定给元素的某一个行为绑定的方法，都是在行为触发后的冒泡阶段把方法执行的
+    //1.当前center的click行为被触发，如果给其绑定了方法，首先把center对应的方法执行；(目标阶段)
+    //2.不仅仅center的click行为被触发了，它所有父级元素的click行为也会被触发
+    // inner的click行为触发 ->如果给inner也绑定了方法，inner对应的方法也会执行
+    //同理依次查找 outer body html document
+    //注意 每个浏览器传播到的最顶层是不一样的，谷歌中可以传播到document，但是在IE中只能到html
+
+   ////document.body.onclick=function(e){
+   //    console.log("body",e)
+   //}
+   //outer.onclick=function(e){
+   //    console.log("outer",e)
+   //}
+   //inner.onclick=function(e){
+   //    console.log("inner",e)
+   //}
+   //center.onclick=function(e){
+   //    console.log("center",e)
+   //}
+
+    //addEventListener 第一个参数是行为的类型 第二个参数是给当前的行为绑定的方法
+    //第三个参数是控制在哪个阶段发生； true:捕获阶段方式  false:冒泡阶段发生
+
+    document.body.addEventListener("click",function(e){
+        console.log("body");//冒泡阶段触发
+    },false)
+    outer.addEventListener("click",function(e){
+        console.log("outer"); //捕获阶段触发
+    },true)
+    inner.addEventListener("click",function(e){
+        console.log("inner"); //冒泡阶段触发
+    },false)
+
+    //点击center  先捕获 到目标 在冒泡  捕获阶段从 document html body outer
+    //目标阶段 center点击 没有绑定方法，进入冒泡阶段
+    // 冒泡阶段 inner触发  outer为捕获阶段以触发所以不输出  body冒泡触发
+    // center.addEventListener("click",function(e){
+    //     console.log("outer");
+    // },true)
+
+
+
+</script>
+</body>
+</html>
