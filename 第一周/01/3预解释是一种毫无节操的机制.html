@@ -16,7 +16,7 @@
     console.log("name" in obj)//true
 
 //1.预解释的时候不管你的条件是否成立，都要把你带var的进行提前的声明
- window的预解释 ：var num; ->window.num;
+ //window的预解释 ：var num; ->window.num;
     if(!("num" in window)){ //false
         var num = 12
     }
@@ -58,16 +58,19 @@
 //    function fn(){
 //        console.log("ok");
 //    }
+//     fn()  //fn is not a function
+
 
 //window预解释
 //声明+定义 fn=xxxfff111;
 //声明 var fn;(不需要重新声明)
 //声明(不重复进行)+定义 fn=xxxfff222;
+
 //-> fn=xxxfff222
 fn(); //2
 function fn(){console.log("ok");};
 fn(); //2
-var fn=10; //fn = 10;
+var fn = 10; //fn = 10;
 fn(); //10() Error:fn is not a function
 function fn(){console.log(2)};
 fn(); //上面报错，下面不执行

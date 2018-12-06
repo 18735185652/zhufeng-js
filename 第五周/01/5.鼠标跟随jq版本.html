@@ -67,14 +67,14 @@
         $box.children("img").bind("mouseover",function(e){
             e = e||window.event;
             e.target = e.target||e.srcElement;
-            var left = e.clientX -$boxOffset.left+10;
-            var Top = e.clientY - $boxOffset.top+10;
+            var left = e.clientX -$boxOffset.left + 10;
+            var Top = e.clientY - $boxOffset.top + 10;
             $mark.stop().show(500).css({left:left,top:Top}).find("img").attr("src",e.target.getAttribute("bigimg")); // hide toggle slideDown slideUp slideToggle fadeIn fadeOut fadeToggle animate...
         })
 
         $box.children("img").bind("mousemove",function(e){
-            e = e||window.event;
-            e.target = e.target||e.srcElement;
+            e = e || window.event;
+            e.target = e.target || e.srcElement;
             var left = e.clientX - $boxOffset.left+10;
             var Top = e.clientY - $boxOffset.top+10;
             $mark.css({left:left,top:Top}); // hide toggle slideDown slideUp slideToggle fadeIn fadeOut fadeToggle animate...

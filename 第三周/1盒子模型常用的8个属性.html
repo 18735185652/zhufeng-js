@@ -34,8 +34,8 @@
     //#box(有很多自己私有的属性)  HTMLDivElement.prototype ->HTMLElement.prototype->Element.prototype
     // ->Node.prototype->EventTarget.prototype->Object.prototype
     var box = document.getElementById("box");
-    console.dir(box)
-    console.log(box.clientHeight)
+    console.dir(box);
+    console.log(box.clientHeight);
     //box.attributes.getNamedItem("class")  //class="item"
 
     //内容的宽度和高度:我们设置的width/height这两个样式就是内容的宽和高，如果没有设置高度height，容器中高度会根据里面
@@ -90,31 +90,8 @@
         document.documentElement[attr] = value;
         document.body[attr] = value;
     }
-    win("clientHeight") //获取
-    win("clientHeight",0)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    win("clientHeight"); //获取
+    win("clientHeight",0);
 
 
 

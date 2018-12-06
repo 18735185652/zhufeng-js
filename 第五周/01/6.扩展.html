@@ -31,13 +31,17 @@
         <div id="mark"></div>
     </div>
 <script>
+
+    //onmouseout 移入box 在移入mark的时候，mark没有做任何操作，但是会向上冒泡 再次触发box的mouseover事件，执行多次 浪费性能
+
     var oBox = document.getElementById("box");
     var oMark = document.getElementById("mark");
-    oBox.onmouseover=function(){
 
+    oBox.onmouseenter=function(){
         oMark.style.display="block"
     }
-    oBox.onmouseout=function(){
+
+    oBox.onmouseleave=function(){
         oMark.style.display="none"
     }
 

@@ -57,9 +57,9 @@ console.dir(Array.prototype)
     //会把人家内置的修改掉，所以我们以后再内置类的原型上增加方法，命名都需要加特殊的前缀
 
     Array.prototype.sort = function(){
-        console.log("ok")
+        console.log("ok");
     }
-    var ary = [1,4,2,6,3,7,8,6]
+    var ary = [1,4,2,6,3,7,8,6];
     ary.sort();
     console.log(ary);
 

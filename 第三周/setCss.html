@@ -2,9 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;padding:0;
+        }
+        #box{
+            position: absolute;
+            top:0;
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+        }
+    </style>
 </head>
 <body>
-$END$
+<div id="box"></div>
+<script src="../第二周/utils.js"></script>
+<script>
+var box = document.getElementById("box");
+console.log(utils.getCss(box, "width"));
+
+/* JS中给元素设置样式属性值，我们只能通过curEle.style[attr]=value;这种方式给当前元素设置行内样式 */
+
+
+/* 给当前元素的某一个样式属性设置值(增加在行内样式上) */
+function setCss(curEle,attr,value){
+    //在JS中设置float样式值得话也需要处理兼容
+    if(attr ==="float"){
+        curEle["style"]["cssFloat"]=value;
+        curEle["style"]["styleFloat"]=value;
+    }
+    //如果打算设置的是元素的透明度，我们需要设置两套样式来兼容所有浏览器
+    if(attr==="opacity"){
+        curEle["style"][attr]=value
+        curEle["style"]["filter"]="alpha(opacity=" + value * 100 +")";
+        return;
+    }
+    //对于某些样式属性，如果传递进来的值没有加单位，我们需要把单位默认的补充上
+    var reg = null;
+    reg = /^(width|height|top|bottom|left|right|((margin|padding)(Top|Bottom|Left|Right)?))$/;
+    if(reg.test(attr)){
+        if(!isNaN(value)){ //是有效数字
+            value += "px";
+        }
+    }
+    curEle["style"][attr]=value;
+
+}
+// utils.setCss(box,"marginLeft",200)
+// utils.setCss(box,"background","red")
+
+
+// utils.setGroupCss(box,{
+//     background:"red",
+//     width:200,
+//     padding:"5px",
+//     float:"right",
+//     border:"5px solid yellow"
+// })
+
+    //JQuery中提供了这样的一个方法：css，这个方法既可以实现获取，也可以实现单独的设置，也可以实现批量的设置
+
+console.log(utils.css(box,"width",500));
+
+
+</script>
 </body>
 </html>

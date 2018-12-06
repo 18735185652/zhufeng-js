@@ -14,36 +14,36 @@
     var i = 5;
     //    console.log(1 + i++); //6 i=6
     //    console.log(1 + (++i)) //i=6 7
+    //                  i=6     i=7   i=8  i=8
     console.log(2 + (i++) + (++i) + (++i) + (i++)); //30
-    console.log(i); //9
+     //               7       +  7     + 8     + 8
+    // console.log(i); //9
 
 
 
-//    function fn(){
-//        var i=10;
-//        return function (n){
-//            console.log(n+(++i));
-//        }
-//    }
-//    var f=fn();
-//    f(10); //21
-//    f(20); //32
-//    fn()(10); //21
-//    fn()(20) //31
+   function fn(){
+       var i=10;
+       return function (n){
+           console.log(n+(++i));
+       }
+   }
+   var f=fn();
+   f(10); //21
+   f(20); //32
+   fn()(10); //21
+   fn()(20) //31
 
 
-
-
-    function fn(i){
-        return function (n){
-            console.log(n+(++i));
-        }
-    }
-    var f=fn(13);
-    f(12); //14+12=26
-    f(14); //15+14=29
-    fn(15)(12); //16+12=28
-    fn(16)(13) //17+13=30
+    // function fn(i){
+    //     return function (n){
+    //         console.log(n+(++i));
+    //     }
+    // }
+    // var f=fn(13);
+    // f(12); //14+12=26
+    // f(14); //15+14=29
+    // fn(15)(12); //16+12=28
+    // fn(16)(13) //17+13=30
 
 </script>
 

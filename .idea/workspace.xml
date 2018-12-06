@@ -1,0 +1,820 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d0b9a57d-9568-4ea6-9611-9ae575bfe851" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/第五周/01/10.事件委托的简单应用.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第五周/01/11.百度搜索.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第五周/01/7.鼠标跟随js.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第五周/01/8.放大镜.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第五周/01/9.事件委托.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第五周/11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongodb/1.run.js" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb/1.run.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongodb/2.insert.js" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb/2.insert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongodb/3.batch.js" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb/3.batch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongodb/4.cursor.js" beforeDir="false" afterPath="$PROJECT_DIR$/mongodb/4.cursor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构师成长/5.module/2.module.js" beforeDir="false" afterPath="$PROJECT_DIR$/架构师成长/5.module/2.module.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构师成长/5.module/school.js" beforeDir="false" afterPath="$PROJECT_DIR$/架构师成长/5.module/school.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构师成长/5.module/useschool.js" beforeDir="false" afterPath="$PROJECT_DIR$/架构师成长/5.module/useschool.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构师成长/7.encoding/1.transfer.js" beforeDir="false" afterPath="$PROJECT_DIR$/架构师成长/7.encoding/1.transfer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构师成长/7.encoding/2.ascii.js" beforeDir="false" afterPath="$PROJECT_DIR$/架构师成长/7.encoding/2.ascii.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构师成长/8.buffer/1.buffer.js" beforeDir="false" afterPath="$PROJECT_DIR$/架构师成长/8.buffer/1.buffer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构师成长/ES6/11.promise.js" beforeDir="false" afterPath="$PROJECT_DIR$/架构师成长/ES6/11.promise.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构师成长/ES6/2.destructure.js" beforeDir="false" afterPath="$PROJECT_DIR$/架构师成长/ES6/2.destructure.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构师成长/ES6/3.teplstr.js" beforeDir="false" afterPath="$PROJECT_DIR$/架构师成长/ES6/3.teplstr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构师成长/ES6/4.func.js" beforeDir="false" afterPath="$PROJECT_DIR$/架构师成长/ES6/4.func.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构师成长/ES6/5.arrow.js" beforeDir="false" afterPath="$PROJECT_DIR$/架构师成长/ES6/5.arrow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构师成长/ES6/6.array.js" beforeDir="false" afterPath="$PROJECT_DIR$/架构师成长/ES6/6.array.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构师成长/ES6/7.object.js" beforeDir="false" afterPath="$PROJECT_DIR$/架构师成长/ES6/7.object.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构师成长/ES6/8.class.js" beforeDir="false" afterPath="$PROJECT_DIR$/架构师成长/ES6/8.class.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构师成长/ES6/8.class_es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/架构师成长/ES6/8.class_es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构师成长/ES6/Promise.js" beforeDir="false" afterPath="$PROJECT_DIR$/架构师成长/ES6/Promise.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构师成长/node/00.js" beforeDir="false" afterPath="$PROJECT_DIR$/架构师成长/node/00.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构师成长/node/2.repl.js" beforeDir="false" afterPath="$PROJECT_DIR$/架构师成长/node/2.repl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构师成长/node/5.nextTick.js" beforeDir="false" afterPath="$PROJECT_DIR$/架构师成长/node/5.nextTick.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构师成长/node/9.fs/1.read.js" beforeDir="false" afterPath="$PROJECT_DIR$/架构师成长/node/9.fs/1.read.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构师成长/node/9.fs/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/架构师成长/node/9.fs/1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/架构师成长/node/console.js" beforeDir="false" afterPath="$PROJECT_DIR$/架构师成长/node/console.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/第一周/01/10综合实战.html" beforeDir="false" afterPath="$PROJECT_DIR$/第一周/01/10综合实战.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/第一周/01/2作用域链.html" beforeDir="false" afterPath="$PROJECT_DIR$/第一周/01/2作用域链.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/第一周/01/3预解释是一种毫无节操的机制.html" beforeDir="false" afterPath="$PROJECT_DIR$/第一周/01/3预解释是一种毫无节操的机制.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/第一周/01/5如何查找上级作用域.html" beforeDir="false" afterPath="$PROJECT_DIR$/第一周/01/5如何查找上级作用域.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/第一周/01/6关于内存的释放和销毁.html" beforeDir="false" afterPath="$PROJECT_DIR$/第一周/01/6关于内存的释放和销毁.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/第一周/01/7作用域练习.html" beforeDir="false" afterPath="$PROJECT_DIR$/第一周/01/7作用域练习.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/第一周/02/1单例模式.html" beforeDir="false" afterPath="$PROJECT_DIR$/第一周/02/1单例模式.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/第一周/02/7.批量设置公有属性.html" beforeDir="false" afterPath="$PROJECT_DIR$/第一周/02/7.批量设置公有属性.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/第三周/1盒子模型常用的8个属性.html" beforeDir="false" afterPath="$PROJECT_DIR$/第三周/1盒子模型常用的8个属性.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/第三周/6复习dom.html" beforeDir="false" afterPath="$PROJECT_DIR$/第三周/6复习dom.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/第三周/7children.html" beforeDir="false" afterPath="$PROJECT_DIR$/第三周/7children.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/第三周/8增加元素.html" beforeDir="false" afterPath="$PROJECT_DIR$/第三周/8增加元素.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/第三周/9getElementsByClassName兼容处理.html" beforeDir="false" afterPath="$PROJECT_DIR$/第三周/9getElementsByClassName兼容处理.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/第三周/setCss.html" beforeDir="false" afterPath="$PROJECT_DIR$/第三周/setCss.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/第二周/03/5编写惰性与贪婪.html" beforeDir="false" afterPath="$PROJECT_DIR$/第二周/03/5编写惰性与贪婪.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/第二周/03/正则基础.html" beforeDir="false" afterPath="$PROJECT_DIR$/第二周/03/正则基础.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/第二周/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/第二周/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/第五周/01/5.鼠标跟随jq版本.html" beforeDir="false" afterPath="$PROJECT_DIR$/第五周/01/5.鼠标跟随jq版本.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/第五周/01/6.扩展.html" beforeDir="false" afterPath="$PROJECT_DIR$/第五周/01/6.扩展.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/第四周/01/1基础动画的实现.html" beforeDir="false" afterPath="$PROJECT_DIR$/第四周/01/1基础动画的实现.html" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="407262053">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="21" />
+          <entry key="project.open.time.0" value="4" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.27" value="2" />
+          <entry key="project.open.time.28" value="2" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.31" value="1" />
+          <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.33" value="1" />
+          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.40" value="1" />
+          <entry key="project.open.time.49" value="1" />
+          <entry key="project.open.time.5" value="4" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.95" value="1" />
+          <entry key="project.opened" value="26" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="113" />
+          <entry key="jpg" value="2" />
+          <entry key="js" value="41" />
+          <entry key="log" value="1" />
+          <entry key="png" value="1" />
+          <entry key="txt" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="113" />
+          <entry key="Image" value="3" />
+          <entry key="JavaScript" value="41" />
+          <entry key="PLAIN_TEXT" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="17758" />
+          <entry key="js" value="14673" />
+          <entry key="txt" value="14" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="17758" />
+          <entry key="JavaScript" value="14672" />
+          <entry key="PLAIN_TEXT" value="14" />
+          <entry key="RegExp" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.js.language.service.starts" />
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/第五周/01/1.事件.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-330">
+              <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/架构师成长/ES6/1.let&amp;const.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="479">
+              <caret line="71" column="7" selection-start-line="71" selection-start-column="3" selection-end-line="71" selection-end-column="7" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/架构师成长/ES6/2.destructure.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29">
+              <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/架构师成长/ES6/3.teplstr.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="87" column="25" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/架构师成长/ES6/5.arrow.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-845">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/架构师成长/ES6/6.array.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/架构师成长/ES6/4.func.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-30">
+              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>nodeList</find>
+      <find>getCss</find>
+      <find>task</find>
+      <find>red</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/架构师成长/ES6/func.js" />
+        <option value="$PROJECT_DIR$/架构师成长/ES6/4.func.js" />
+        <option value="$PROJECT_DIR$/架构师成长/ES6/5.arrow.js" />
+        <option value="$PROJECT_DIR$/架构师成长/ES6/7.object.js" />
+        <option value="$PROJECT_DIR$/架构师成长/ES6/8.class.js" />
+        <option value="$PROJECT_DIR$/架构师成长/ES6/8.class_es5.js" />
+        <option value="$PROJECT_DIR$/架构师成长/ES6/11.promise.js" />
+        <option value="$PROJECT_DIR$/架构师成长/ES6/Promise.js" />
+        <option value="$PROJECT_DIR$/架构师成长/node/00.js" />
+        <option value="$PROJECT_DIR$/架构师成长/node/real.log" />
+        <option value="$PROJECT_DIR$/架构师成长/node/2.repl.js" />
+        <option value="$PROJECT_DIR$/架构师成长/node/console.js" />
+        <option value="$PROJECT_DIR$/架构师成长/node/5.nextTick.js" />
+        <option value="$PROJECT_DIR$/架构师成长/5.module/2.module.js" />
+        <option value="$PROJECT_DIR$/架构师成长/5.module/school.js" />
+        <option value="$PROJECT_DIR$/架构师成长/5.module/useschool.js" />
+        <option value="$PROJECT_DIR$/架构师成长/7.encoding/1.transfer.js" />
+        <option value="$PROJECT_DIR$/架构师成长/7.encoding/2.ascii.js" />
+        <option value="$PROJECT_DIR$/架构师成长/8.buffer/1.buffer.js" />
+        <option value="$PROJECT_DIR$/架构师成长/node/9.fs/1.txt" />
+        <option value="$PROJECT_DIR$/架构师成长/node/9.fs/2.txt" />
+        <option value="$PROJECT_DIR$/架构师成长/node/9.fs/1.read.js" />
+        <option value="$PROJECT_DIR$/mongodb/1.run.js" />
+        <option value="$PROJECT_DIR$/mongodb/4.cursor.js" />
+        <option value="$PROJECT_DIR$/mongodb/2.insert.js" />
+        <option value="$PROJECT_DIR$/mongodb/3.batch.js" />
+        <option value="F:/demo/05 二级下拉菜单.html" />
+        <option value="$PROJECT_DIR$/第三周/1盒子模型常用的8个属性.html" />
+        <option value="$PROJECT_DIR$/第五周/01/1.事件.html" />
+        <option value="$PROJECT_DIR$/第五周/01/2.事件对象.html" />
+        <option value="$PROJECT_DIR$/第五周/01/4.事件的传播机制.html" />
+        <option value="$PROJECT_DIR$/第五周/01/鼠标跟随jq版本.html" />
+        <option value="$PROJECT_DIR$/第五周/01/7.鼠标跟随js.js" />
+        <option value="$PROJECT_DIR$/第五周/01/3.默认行为.html" />
+        <option value="$PROJECT_DIR$/第五周/01/5.鼠标跟随jq版本.html" />
+        <option value="$PROJECT_DIR$/第五周/01/6.扩展.html" />
+        <option value="$PROJECT_DIR$/../66.html" />
+        <option value="$PROJECT_DIR$/第五周/01/7.鼠标跟随js.html" />
+        <option value="$PROJECT_DIR$/第五周/01/9.事件委托.html" />
+        <option value="$PROJECT_DIR$/第五周/01/10.事件委托的简单应用.html" />
+        <option value="$PROJECT_DIR$/第五周/01/8.放大镜.js" />
+        <option value="$PROJECT_DIR$/第一周/02/7.批量设置公有属性.html" />
+        <option value="$PROJECT_DIR$/第五周/01/8.放大镜.html" />
+        <option value="$PROJECT_DIR$/第五周/11.html" />
+        <option value="$PROJECT_DIR$/../2.html" />
+        <option value="G:/珠峰2016 JavaScript培训VIP精品课程价值14800/JavaScript201603-master/20160514_全日制第五周周末1/6、京东放大镜.html" />
+        <option value="$PROJECT_DIR$/第五周/01/11.百度搜索.html" />
+        <option value="$PROJECT_DIR$/../3.html" />
+        <option value="$PROJECT_DIR$/架构师成长/ES6/2.destructure.js" />
+        <option value="$PROJECT_DIR$/架构师成长/ES6/3.teplstr.js" />
+        <option value="$PROJECT_DIR$/架构师成长/ES6/6.array.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-73" />
+    <option name="y" value="103" />
+    <option name="width" value="1854" />
+    <option name="height" value="887" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="zhufeng-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhufeng-js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zhufeng-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhufeng-js" type="462c0819:PsiDirectoryNode" />
+              <item name="mongodb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zhufeng-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhufeng-js" type="462c0819:PsiDirectoryNode" />
+              <item name="架构师成长" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zhufeng-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhufeng-js" type="462c0819:PsiDirectoryNode" />
+              <item name="架构师成长" type="462c0819:PsiDirectoryNode" />
+              <item name="ES6" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="8.11.4" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="3.teplstr.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="3.teplstr.js" working-dir="$PROJECT_DIR$/架构师成长/ES6">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.3.teplstr.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d0b9a57d-9568-4ea6-9611-9ae575bfe851" name="Default Changelist" comment="" />
+      <created>1539046941070</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1539046941070</updated>
+      <workItem from="1539046943910" duration="10396000" />
+      <workItem from="1539133504976" duration="15792000" />
+      <workItem from="1539221480446" duration="10246000" />
+      <workItem from="1539307022840" duration="15741000" />
+      <workItem from="1540170456551" duration="4867000" />
+      <workItem from="1540256795600" duration="22604000" />
+      <workItem from="1540342385087" duration="19179000" />
+      <workItem from="1540431137682" duration="13789000" />
+      <workItem from="1540516680471" duration="12309000" />
+      <workItem from="1540776307065" duration="6803000" />
+      <workItem from="1540863234983" duration="252000" />
+      <workItem from="1540884013331" duration="73000" />
+      <workItem from="1540972153811" duration="2891000" />
+      <workItem from="1541055798295" duration="2376000" />
+      <workItem from="1541387474575" duration="876000" />
+      <workItem from="1541470425709" duration="6179000" />
+      <workItem from="1541553602295" duration="21329000" />
+      <workItem from="1541639531772" duration="2498000" />
+      <workItem from="1541642596881" duration="11078000" />
+      <workItem from="1541664356765" duration="3152000" />
+      <workItem from="1541726120992" duration="577000" />
+      <workItem from="1541726870604" duration="20274000" />
+      <workItem from="1541984883017" duration="883000" />
+      <workItem from="1542024981465" duration="706000" />
+      <workItem from="1542088148095" duration="37000" />
+      <workItem from="1544063601852" duration="1603000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="206510000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13593256" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32934928" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.123644255" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17860906" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32934928" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.123644255" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/架构师成长/5.module/useschool.js</url>
+          <line>9</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/架构师成长/node/real.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/架构师成长/node/00.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="20" column="63" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/架构师成长/node/2.repl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/架构师成长/node/console.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/架构师成长/node/9.fs/1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/架构师成长/node/5.nextTick.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/架构师成长/5.module/2.module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/架构师成长/node/9.fs/2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/架构师成长/node/9.fs/1.read.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="41" column="2" lean-forward="true" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongodb/1.run.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/架构师成长/8.buffer/1.buffer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="25" column="2" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/架构师成长/7.encoding/2.ascii.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/架构师成长/7.encoding/1.transfer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/架构师成长/5.module/useschool.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongodb/3.batch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongodb/2.insert.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongodb/4.cursor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/架构师成长/5.module/school.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="10" selection-start-line="10" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/demo/01 label.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90" />
+      </provider>
+    </entry>
+    <entry file="file://F:/demo/05 二级下拉菜单.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="122" column="8" lean-forward="true" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第三周/1盒子模型常用的8个属性.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/02/寄生式组合继承.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第五周/01/2.事件对象.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-625">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第五周/01/3.默认行为.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="55" column="21" lean-forward="true" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../66.html" />
+    <entry file="file://$PROJECT_DIR$/第五周/01/4.事件的传播机制.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1680">
+          <caret line="56" column="50" lean-forward="true" selection-start-line="54" selection-start-column="4" selection-end-line="56" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/珠峰2016 JavaScript培训VIP精品课程价值14800/JavaScript201603-master/20160514_全日制第五周周末1/思考题-鼠标跟随提示.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第五周/01/6.扩展.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第五周/01/5.鼠标跟随jq版本.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="69" column="21" lean-forward="true" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第五周/01/10.事件委托的简单应用.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="55" column="46" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第五周/01/9.事件委托.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第五周/01/7.鼠标跟随js.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第二周/01/2原型深入.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第二周/01/1深入原型.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/02/混合模式继承.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/02/7.批量设置公有属性.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/02/9原型继承.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第二周/01/3call.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第五周/11.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1110">
+          <caret line="71" column="55" selection-start-line="71" selection-start-column="55" selection-end-line="71" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/珠峰2016 JavaScript培训VIP精品课程价值14800/JavaScript201603-master/20160514_全日制第五周周末1/6、京东放大镜.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="84" column="2" selection-start-line="84" selection-start-column="2" selection-end-line="84" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第五周/01/8.放大镜.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="719">
+          <caret line="116" column="29" lean-forward="true" selection-start-line="116" selection-start-column="29" selection-end-line="116" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2730">
+          <caret line="109" column="29" lean-forward="true" selection-start-line="109" selection-start-column="29" selection-end-line="109" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第五周/01/11.百度搜索.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="77" column="5" selection-start-line="77" selection-start-column="5" selection-end-line="77" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第五周/01/1.事件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/架构师成长/ES6/1.let&amp;const.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="71" column="7" selection-start-line="71" selection-start-column="3" selection-end-line="71" selection-end-column="7" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/架构师成长/ES6/2.destructure.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/架构师成长/ES6/4.func.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/架构师成长/ES6/3.teplstr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="87" column="25" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/架构师成长/ES6/5.arrow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-845">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/架构师成长/ES6/6.array.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
